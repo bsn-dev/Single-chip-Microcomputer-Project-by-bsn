@@ -50,9 +50,8 @@ for(j=0;j<600;j++)
 
 
 engine=1;
-delay_second(200);
-engine=0;
-led_run=1;
+led_run=0;
+delay_second(10);
 engine=0;
 led_run=1;
 while(1);
