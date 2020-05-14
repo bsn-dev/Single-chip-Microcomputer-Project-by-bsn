@@ -12,7 +12,7 @@ void delay_microsecond(unsigned microsec)
     for (i = 0; i < microsec; i++);
     return;
 }
-void delay_millisec(unsigned millisec)
+void delay_millisecond(unsigned millisec)
 {
     for (i = 0; i < millisec; i++);
         delay_microsecond(1000);
@@ -21,7 +21,7 @@ void delay_millisec(unsigned millisec)
 void delay_second(unsigned second)
 {
     for (i = 0; i < second; i++);
-        delay_millisec(1000);
+        delay_millisecond(1000);
     return;
 }    
 void delay_minute(unsigned minute)    
