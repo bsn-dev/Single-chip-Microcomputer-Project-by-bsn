@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        05/14/2020  15:06:42  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/14/2020  17:47:03  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -59,7 +59,7 @@ SYMBOL TABLE OF MODULE:  template (MAIN)
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2020  15:06:42  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2020  17:47:03  PAGE 2
 
 
   C:00E4H         PUBLIC        _delay
@@ -77,41 +77,41 @@ SYMBOL TABLE OF MODULE:  template (MAIN)
   -------         ENDPROC       L?0017
   -------         PROC          _DELAY
   D:0006H         SYMBOL        i
-  C:00E4H         LINE#         10
   C:00E4H         LINE#         11
   C:00E4H         LINE#         12
-  C:00EEH         LINE#         13
+  C:00E4H         LINE#         13
+  C:00EEH         LINE#         14
   -------         ENDPROC       _DELAY
   -------         PROC          MAIN
   -------         DO            
   D:0008H         SYMBOL        i
   D:000CH         SYMBOL        j
   -------         ENDDO         
-  C:0003H         LINE#         16
   C:0003H         LINE#         17
-  C:0003H         LINE#         20
-  C:0005H         LINE#         21
-  C:0007H         LINE#         23
-  C:0025H         LINE#         24
+  C:0003H         LINE#         18
+  C:0003H         LINE#         21
+  C:0005H         LINE#         22
+  C:0007H         LINE#         24
   C:0025H         LINE#         25
   C:0025H         LINE#         26
-  C:0028H         LINE#         27
-  C:0043H         LINE#         30
-  C:0060H         LINE#         31
+  C:0025H         LINE#         27
+  C:0028H         LINE#         28
+  C:0043H         LINE#         31
   C:0060H         LINE#         32
-  C:0062H         LINE#         33
-  C:0064H         LINE#         34
-  C:006BH         LINE#         35
-  C:0086H         LINE#         36
-  C:0088H         LINE#         37
-  C:008AH         LINE#         39
-  C:00A8H         LINE#         40
+  C:0060H         LINE#         33
+  C:0062H         LINE#         34
+  C:0064H         LINE#         35
+  C:006BH         LINE#         36
+  C:0086H         LINE#         37
+  C:0088H         LINE#         38
+  C:008AH         LINE#         40
   C:00A8H         LINE#         41
   C:00A8H         LINE#         42
-  C:00ABH         LINE#         43
-  C:00C6H         LINE#         45
+  C:00A8H         LINE#         43
+  C:00ABH         LINE#         44
   C:00C6H         LINE#         46
-  C:00C6H         LINE#         48
+  C:00C6H         LINE#         47
+  C:00C6H         LINE#         49
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
@@ -119,7 +119,7 @@ SYMBOL TABLE OF MODULE:  template (MAIN)
   C:00C8H         PUBLIC        ?C?SLCMP
   -------         ENDMOD        ?C?SLCMP
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2020  15:06:42  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2020  17:47:03  PAGE 3
 
 
 Program Size: data=17.0 xdata=0 code=251
