@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        05/14/2020  14:24:26  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/14/2020  15:06:42  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -22,15 +22,15 @@ LINK MAP OF MODULE:  template (MAIN)
 
             * * * * * * *   D A T A   M E M O R Y   * * * * * * *
             REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
-            DATA    0008H     0004H     UNIT         _DATA_GROUP_
-            IDATA   000CH     0001H     UNIT         ?STACK
+            DATA    0008H     0008H     UNIT         _DATA_GROUP_
+            IDATA   0010H     0001H     UNIT         ?STACK
 
             * * * * * * *   C O D E   M E M O R Y   * * * * * * *
             CODE    0000H     0003H     ABSOLUTE     
-            CODE    0003H     004DH     UNIT         ?PR?MAIN?MAIN
-            CODE    0050H     0016H     UNIT         ?C?LIB_CODE
-            CODE    0066H     000CH     UNIT         ?C_C51STARTUP
-            CODE    0072H     000BH     UNIT         ?PR?_DELAY?MAIN
+            CODE    0003H     00C5H     UNIT         ?PR?MAIN?MAIN
+            CODE    00C8H     0016H     UNIT         ?C?LIB_CODE
+            CODE    00DEH     0011H     UNIT         ?PR?_DELAY?MAIN
+            CODE    00EFH     000CH     UNIT         ?C_C51STARTUP
 
 
 
@@ -43,7 +43,7 @@ SEGMENT                          DATA_GROUP
 ?C_C51STARTUP                  -----    -----
   +--> ?PR?MAIN?MAIN
 
-?PR?MAIN?MAIN                  0008H    0004H
+?PR?MAIN?MAIN                  0008H    0008H
   +--> ?PR?_DELAY?MAIN
 
 
@@ -59,10 +59,11 @@ SYMBOL TABLE OF MODULE:  template (MAIN)
   D:0090H         PUBLIC        P1
   D:00B0H         PUBLIC        P3
   D:00A8H         PUBLIC        IE
-BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2020  14:24:26  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2020  15:06:42  PAGE 2
 
 
-  C:0072H         PUBLIC        _delay
+  C:00E4H         PUBLIC        _delay
+  B:0080H.2       PUBLIC        beef
   D:00B8H         PUBLIC        IP
   C:0003H         PUBLIC        main
   D:0098H         PUBLIC        SCON
@@ -72,38 +73,54 @@ SYMBOL TABLE OF MODULE:  template (MAIN)
   B:0080H.1       PUBLIC        led_run
   B:0090H.0       PUBLIC        engine
   D:00D0H         PUBLIC        PSW
+  -------         PROC          L?0017
+  -------         ENDPROC       L?0017
   -------         PROC          _DELAY
   D:0006H         SYMBOL        i
-  C:0072H         LINE#         9
-  C:0072H         LINE#         10
-  C:0072H         LINE#         11
-  C:007CH         LINE#         12
+  C:00E4H         LINE#         10
+  C:00E4H         LINE#         11
+  C:00E4H         LINE#         12
+  C:00EEH         LINE#         13
   -------         ENDPROC       _DELAY
   -------         PROC          MAIN
   -------         DO            
   D:0008H         SYMBOL        i
+  D:000CH         SYMBOL        j
   -------         ENDDO         
-  C:0003H         LINE#         15
   C:0003H         LINE#         16
-  C:0003H         LINE#         18
-  C:0005H         LINE#         19
-  C:0007H         LINE#         21
-  C:0024H         LINE#         22
-  C:0024H         LINE#         23
-  C:0026H         LINE#         24
-  C:0028H         LINE#         25
-  C:002FH         LINE#         26
-  C:004AH         LINE#         27
-  C:004CH         LINE#         28
-  C:004EH         LINE#         30
-  C:004EH         LINE#         31
-  C:004EH         LINE#         33
+  C:0003H         LINE#         17
+  C:0003H         LINE#         20
+  C:0005H         LINE#         21
+  C:0007H         LINE#         23
+  C:0025H         LINE#         24
+  C:0025H         LINE#         25
+  C:0025H         LINE#         26
+  C:0028H         LINE#         27
+  C:0043H         LINE#         30
+  C:0060H         LINE#         31
+  C:0060H         LINE#         32
+  C:0062H         LINE#         33
+  C:0064H         LINE#         34
+  C:006BH         LINE#         35
+  C:0086H         LINE#         36
+  C:0088H         LINE#         37
+  C:008AH         LINE#         39
+  C:00A8H         LINE#         40
+  C:00A8H         LINE#         41
+  C:00A8H         LINE#         42
+  C:00ABH         LINE#         43
+  C:00C6H         LINE#         45
+  C:00C6H         LINE#         46
+  C:00C6H         LINE#         48
   -------         ENDPROC       MAIN
   -------         ENDMOD        MAIN
 
   -------         MODULE        ?C?SLCMP
-  C:0050H         PUBLIC        ?C?SLCMP
+  C:00C8H         PUBLIC        ?C?SLCMP
   -------         ENDMOD        ?C?SLCMP
 
-Program Size: data=13.0 xdata=0 code=125
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/14/2020  15:06:42  PAGE 3
+
+
+Program Size: data=17.0 xdata=0 code=251
 LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

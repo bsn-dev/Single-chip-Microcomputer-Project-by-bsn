@@ -6,13 +6,13 @@ sbit led_run=P0^1;
 sbit beef=P0^2;
 sbit engine=P1^0;
 
-//延时函数delay
+//脩脫脢卤潞炉脢媒delay
 void delay(int i)
 {
     while(i--);
 }
 
-//主程序
+//脰梅鲁脤脨貌
 void main()
 {
 long i;
@@ -27,11 +27,11 @@ for(j=0;j<600;j++)
     }
 
 
-for(i=0;i<100;i++) //循环400次,大约18s
+for(i=0;i<100;i++) //脩颅禄路400麓脦,麓贸脭录18s
     {
         engine=1;
         led_run=0;
-        delay(5000);  //一次约5ms
+        delay(5000);  //脪禄麓脦脭录5ms
     }
 engine=0;
 led_run=1;
