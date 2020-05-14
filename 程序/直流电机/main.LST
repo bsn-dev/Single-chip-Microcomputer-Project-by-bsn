@@ -1,4 +1,4 @@
-C51 COMPILER V9.01   MAIN                                                                  05/14/2020 13:24:26 PAGE 1   
+C51 COMPILER V9.01   MAIN                                                                  05/14/2020 14:24:26 PAGE 1   
 
 
 C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
@@ -11,35 +11,40 @@ line level    source
    2          #include <intrins.h>
    3          
    4          sbit led_power=P0^0;
-   5          sbit engine=P1^0;
-   6          
-   7          //延时函数delay
-   8          void delay(int i)
-   9          {
-  10   1          while(i--);
-  11   1      }
-  12          
-  13          //主程序
-  14          void main()
-  15          {
-  16   1      long i;
-  17   1      led_power=0;
-  18   1      engine=0;
-  19   1      for(i=0;i<400;i++) //??400?,?????20s
-  20   1      {
-  21   2          engine=1;
-  22   2          delay(5000);  //????????5ms
-  23   2      }
-  24   1      engine=0;
-  25   1      while(1)
-  26   1      {
-  27   2      
-  28   2      }
-  29   1      }
+   5          sbit led_run=P0^1;
+   6          sbit engine=P1^0;
+   7          
+   8          //延时函数delay
+   9          void delay(int i)
+  10          {
+  11   1          while(i--);
+  12   1      }
+  13          
+  14          //主程序
+  15          void main()
+  16          {
+  17   1      long i;
+  18   1      led_power=0;
+  19   1      engine=0;
+  20   1      
+  21   1      for(i=0;i<50;i++) //循环400次,大约18s
+  22   1      {
+  23   2          engine=1;
+  24   2              led_run=0;
+  25   2          delay(5000);  //一次约5ms
+  26   2      }
+  27   1      engine=0;
+  28   1      led_run=1;
+  29   1      
+  30   1      while(1)
+  31   1      {
+  32   2         
+  33   2      }
+  34   1      }
 
 
 MODULE INFORMATION:   STATIC OVERLAYABLE
-   CODE SIZE        =     85    ----
+   CODE SIZE        =     88    ----
    CONSTANT SIZE    =   ----    ----
    XDATA SIZE       =   ----    ----
    PDATA SIZE       =   ----    ----

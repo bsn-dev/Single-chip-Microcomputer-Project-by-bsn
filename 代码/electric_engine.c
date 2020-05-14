@@ -15,7 +15,7 @@ void main()
 {
 long i;
 engine=0;
-for(i=0;i<400;i++) //循环400次，计算得大约20s
+for(i=0;i<400;i++) //循环400次，计算得大约18s
 {
     engine=1;
     delay(5000);  //根据芯片频率大约5ms
