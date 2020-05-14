@@ -14,25 +14,25 @@ void delay_microsecond(unsigned microsec)
 }
 void delay_millisecond(unsigned millisec)
 {
-    for (i = 0; i < millisec; i++);
+    for (i = 0; i < millisec; i++)
         delay_microsecond(1000);
     return;
 }
 void delay_second(unsigned second)
 {
-    for (i = 0; i < second; i++);
+    for (i = 0; i < second; i++)
         delay_millisecond(1000);
     return;
 }    
 void delay_minute(unsigned minute)    
 {
-    for (i = 0; i < minute; i++);
+    for (i = 0; i < minute; i++)
         delay_second(60);
     return;
 }
 void delay_hour(unsigned hour)
 {
-    for (i = 0; i < hour; i++);
+    for (i = 0; i < hour; i++)
         delay_minute(60);
     return;
 }
@@ -51,10 +51,9 @@ for(j=0;j<600;j++)
 
 engine=1;
 led_run=0;
-delay_second(10);
+delay_second(20);
 engine=0;
 led_run=1;
-while(1);
 
 for(j=0;j<600;j++)
     {
