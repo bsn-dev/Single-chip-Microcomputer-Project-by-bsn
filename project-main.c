@@ -6,40 +6,61 @@ sbit led_run=P0^1;
 sbit beef=P0^2;
 sbit engine=P1^0;
 
-//ÑÓÊ±º¯Êýdelay
-void delay(int i)
+unsigned i;
+void delay_microsecond(unsigned microsec)
 {
-    while(i--);
+    for (i = 0; i < microsec; i++);
+    return;
 }
-
-//Ö÷³ÌÐò
+void delay_millisec(unsigned millisec)
+{
+    for (i = 0; i < millisec; i++);
+        delay_microsecond(1000);
+    return;
+}
+void delay_second(unsigned second)
+{
+    for (i = 0; i < second; i++);
+        delay_millisec(1000);
+    return;
+}    
+void delay_minute(unsigned minute)    
+{
+    for (i = 0; i < minute; i++);
+        delay_second(60);
+    return;
+}
+void delay_hour(unsigned hour)
+{
+    for (i = 0; i < hour; i++);
+        delay_minute(60);
+    return;
+}
 void main()
 {
-long i;
-long j;
+int j;
 led_power=0;
 engine=0;
 
 for(j=0;j<600;j++)
     {
         beef=~beef;
-        delay(100);
+        delay_microsecond(100);
     }
 
 
-for(i=0;i<100;i++) //Ñ­»·400´Î,´óÔ¼18s
-    {
-        engine=1;
-        led_run=0;
-        delay(5000);  //Ò»´ÎÔ¼5ms
-    }
+engine=1;
+delay_second(200);
 engine=0;
 led_run=1;
+engine=0;
+led_run=1;
+while(1);
 
 for(j=0;j<600;j++)
     {
         beef=~beef;
-        delay(100);
+        delay_microsecond(100);
     }   
 
 while(1)
