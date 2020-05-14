@@ -1,12 +1,12 @@
 #include <reg52.h>
 
-sbit led=P0^0;
+sbit led_power=P0^0;
 
 void main()
 {
-    led=1
+    led_power=1
     while(1)
     {
-        
+
     }
 }
