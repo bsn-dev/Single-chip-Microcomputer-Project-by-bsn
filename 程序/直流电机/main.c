@@ -1,6 +1,5 @@
 #include <reg52.h>
 #include <intrins.h>
-#include <stdint.h>
 
 sbit led_power=P0^0;
 sbit led_run=P0^1;
