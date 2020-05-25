@@ -1,0 +1,206 @@
+BL51 BANKED LINKER/LOCATER V6.22                                                        05/16/2020  13:03:29  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE main.obj TO template RAMSIZE (256)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  main.obj (MAIN)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  template (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0003H     UNIT         ?DT?MAIN
+            IDATA   000BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+                    0006H     0005H                  *** GAP ***
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    009AH     0056H     UNIT         ?PR?LED_TIMER?MAIN
+            CODE    00F0H     002EH     UNIT         ?PR?RUN?MAIN
+            CODE    011EH     0018H     UNIT         ?PR?BEEF_RUN?MAIN
+            CODE    0136H     0010H     UNIT         ?PR?TIMER0INIT?MAIN
+            CODE    0146H     000BH     UNIT         ?PR?_DELAY?MAIN
+            CODE    0151H     000BH     UNIT         ?PR?MAIN?MAIN
+            CODE    015CH     0008H     UNIT         ?C_INITSEG
+            CODE    0164H     0007H     UNIT         ?PR?INT0INIT?MAIN
+
+
+
+OVERLAY MAP OF MODULE:   template (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?RUN?MAIN
+  +--> ?PR?BEEF_RUN?MAIN
+  +--> ?PR?TIMER0INIT?MAIN
+
+?PR?BEEF_RUN?MAIN
+  +--> ?PR?_DELAY?MAIN
+
+*** NEW ROOT ***************************************************
+
+?PR?LED_TIMER?MAIN
+  +--> ?PR?BEEF_RUN?MAIN
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2020  13:03:29  PAGE 2
+
+
+  +--> ?PR?INT0INIT?MAIN
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?INT0INIT?MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  template (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:000AH         PUBLIC        second
+  D:0080H         PUBLIC        P0
+  D:0090H         PUBLIC        P1
+  D:00B0H         PUBLIC        P3
+  B:00A8H.7       PUBLIC        EA
+  D:00A8H         PUBLIC        IE
+  C:0146H         PUBLIC        _delay
+  B:0080H.2       PUBLIC        beef
+  D:00B8H         PUBLIC        IP
+  C:0151H         PUBLIC        main
+  D:0098H         PUBLIC        SCON
+  D:0089H         PUBLIC        TMOD
+  D:0088H         PUBLIC        TCON
+  C:009AH         PUBLIC        led_timer
+  B:0080H.0       PUBLIC        led_power
+  B:00A8H.1       PUBLIC        ET0
+  C:011EH         PUBLIC        beef_run
+  C:0136H         PUBLIC        Timer0Init
+  D:008CH         PUBLIC        TH0
+  B:00A8H.0       PUBLIC        EX0
+  B:0088H.0       PUBLIC        IT0
+  D:008AH         PUBLIC        TL0
+  C:00F0H         PUBLIC        run
+  B:0088H.4       PUBLIC        TR0
+  D:00C8H         PUBLIC        T2CON
+  B:0080H.1       PUBLIC        led_run
+  C:0164H         PUBLIC        Int0Init
+  B:0090H.0       PUBLIC        engine
+  D:00D0H         PUBLIC        PSW
+  -------         PROC          TIMER0INIT
+  C:0136H         LINE#         10
+  C:0136H         LINE#         11
+  C:0136H         LINE#         12
+  C:0139H         LINE#         13
+  C:013CH         LINE#         14
+  C:013FH         LINE#         15
+  C:0141H         LINE#         16
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2020  13:03:29  PAGE 3
+
+
+  C:0143H         LINE#         17
+  C:0145H         LINE#         18
+  -------         ENDPROC       TIMER0INIT
+  -------         PROC          _DELAY
+  D:0006H         SYMBOL        i
+  C:0146H         LINE#         20
+  C:0146H         LINE#         21
+  C:0146H         LINE#         22
+  C:0150H         LINE#         23
+  -------         ENDPROC       _DELAY
+  -------         PROC          BEEF_RUN
+  -------         DO            
+  D:0002H         SYMBOL        j
+  -------         ENDDO         
+  C:011EH         LINE#         25
+  C:011EH         LINE#         26
+  C:011EH         LINE#         28
+  C:0121H         LINE#         29
+  C:0121H         LINE#         30
+  C:0123H         LINE#         31
+  C:012AH         LINE#         32
+  C:0135H         LINE#         33
+  -------         ENDPROC       BEEF_RUN
+  -------         PROC          INT0INIT
+  C:0164H         LINE#         35
+  C:0164H         LINE#         36
+  C:0164H         LINE#         37
+  C:0166H         LINE#         38
+  C:0168H         LINE#         39
+  C:016AH         LINE#         41
+  -------         ENDPROC       INT0INIT
+  -------         PROC          RUN
+  C:00F0H         LINE#         43
+  C:0101H         LINE#         45
+  C:0103H         LINE#         46
+  C:0106H         LINE#         47
+  C:0109H         LINE#         48
+  C:010CH         LINE#         49
+  C:010FH         LINE#         50
+  -------         ENDPROC       RUN
+  -------         PROC          LED_TIMER
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:009AH         LINE#         52
+  C:00ABH         LINE#         55
+  C:00ADH         LINE#         56
+  C:00B0H         LINE#         57
+  C:00B3H         LINE#         58
+  C:00BBH         LINE#         59
+  C:00C3H         LINE#         60
+  C:00C3H         LINE#         61
+  C:00C8H         LINE#         62
+  C:00C8H         LINE#         63
+  C:00CAH         LINE#         64
+  C:00CCH         LINE#         65
+  C:00CEH         LINE#         66
+BL51 BANKED LINKER/LOCATER V6.22                                                      05/16/2020  13:03:29  PAGE 4
+
+
+  C:00D1H         LINE#         67
+  C:00D4H         LINE#         68
+  C:00D7H         LINE#         69
+  C:00D7H         LINE#         70
+  C:00DDH         LINE#         71
+  C:00DFH         LINE#         72
+  C:00E1H         LINE#         73
+  C:00E1H         LINE#         74
+  -------         ENDPROC       LED_TIMER
+  -------         PROC          MAIN
+  C:0151H         LINE#         78
+  C:0151H         LINE#         79
+  C:0151H         LINE#         80
+  C:0153H         LINE#         81
+  C:0155H         LINE#         82
+  C:0157H         LINE#         83
+  C:015AH         LINE#         84
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        MAIN
+
+Program Size: data=12.0 xdata=0 code=358
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

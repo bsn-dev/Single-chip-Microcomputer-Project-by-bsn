@@ -169,8 +169,8 @@
       <Focus>0</Focus>
       <ColumnNumber>20</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1</TopLine>
-      <CurrentLine>2</CurrentLine>
+      <TopLine>9</TopLine>
+      <CurrentLine>9</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\main.c</PathWithFileName>
       <FilenameWithoutPath>main.c</FilenameWithoutPath>
@@ -178,9 +178,35 @@
   </Group>
 
   <AlienFiles>
+    <PathWithFilename>D:\wodewendang\1单片机大作业bsn\Single-chip Microcomputer Project by bsn\electric_engine.c</PathWithFilename>
+    <TopLine>1</TopLine>
+    <CurrentLine>28</CurrentLine>
+    <Constant>0</Constant>
+    <WindowPosition>
+      <length>0</length>
+      <flags>0</flags>
+      <showCmd>0</showCmd>
+      <MinPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MinPosition>
+      <MaxPosition>
+        <xPos>0</xPos>
+        <yPos>0</yPos>
+      </MaxPosition>
+      <NormalPosition>
+        <Top>0</Top>
+        <Left>0</Left>
+        <Right>0</Right>
+        <Bottom>0</Bottom>
+      </NormalPosition>
+    </WindowPosition>
+  </AlienFiles>
+
+  <AlienFiles>
     <PathWithFilename>C:\KEIL\C51\INC\REG52.H</PathWithFilename>
-    <TopLine>33</TopLine>
-    <CurrentLine>33</CurrentLine>
+    <TopLine>51</TopLine>
+    <CurrentLine>51</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -207,32 +233,6 @@
     <PathWithFilename>C:\KEIL\C51\INC\INTRINS.H</PathWithFilename>
     <TopLine>1</TopLine>
     <CurrentLine>1</CurrentLine>
-    <Constant>0</Constant>
-    <WindowPosition>
-      <length>0</length>
-      <flags>0</flags>
-      <showCmd>0</showCmd>
-      <MinPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MinPosition>
-      <MaxPosition>
-        <xPos>0</xPos>
-        <yPos>0</yPos>
-      </MaxPosition>
-      <NormalPosition>
-        <Top>0</Top>
-        <Left>0</Left>
-        <Right>0</Right>
-        <Bottom>0</Bottom>
-      </NormalPosition>
-    </WindowPosition>
-  </AlienFiles>
-
-  <AlienFiles>
-    <PathWithFilename>D:\wodewendang\1单片机大作业bsn\Single-chip Microcomputer Project by bsn\electric_engine.c</PathWithFilename>
-    <TopLine>1</TopLine>
-    <CurrentLine>28</CurrentLine>
     <Constant>0</Constant>
     <WindowPosition>
       <length>0</length>
@@ -1601,8 +1601,8 @@
         <Doc>
           <Name>.\main.c</Name>
           <ColumnNumber>20</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>2</CurrentLine>
+          <TopLine>9</TopLine>
+          <CurrentLine>9</CurrentLine>
         </Doc>
         <Doc>
           <Name>C:\KEIL\C51\INC\INTRINS.H</Name>
@@ -1612,9 +1612,9 @@
         </Doc>
         <Doc>
           <Name>C:\KEIL\C51\INC\REG52.H</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>33</TopLine>
-          <CurrentLine>33</CurrentLine>
+          <ColumnNumber>36</ColumnNumber>
+          <TopLine>51</TopLine>
+          <CurrentLine>51</CurrentLine>
         </Doc>
         <Doc>
           <Name>D:\wodewendang\1单片机大作业bsn\Single-chip Microcomputer Project by bsn\electric_engine.c</Name>

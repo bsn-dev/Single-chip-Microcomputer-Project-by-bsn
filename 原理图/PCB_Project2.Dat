@@ -1,0 +1,15 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~PCB_Project2.PrjPCB|ReportField=ProjectFullPath~D:\wodewendang\1单片机大作业bsn\Single-chip Microcomputer Project by bsn\原理图\PCB_Project2.PrjPCB|ReportField=Title~Bill of Materials For Project [PCB_Project2.PrjPCB] (No PCB Document Selected)|ReportField=TotalQuantity~22|ReportField=ReportTime~11:43:51|ReportField=ReportDate~2020/5/22|ReportField=ReportDateTime~2020/5/22 11:43:51|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~2020/5/22|ReportField=CurrentTime~11:43:49|ReportField=Date~|ReportField=DocumentFullPathAndName~D:\wodewendang\1单片机大作业bsn\Single-chip Microcomputer Project by bsn\原理图\单片机最小系统.SchDoc|ReportField=DocumentName~单片机最小系统.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~2020/5/22|ReportField=Organization~|ReportField=ProjectName~PCB_Project2.PrjPCB|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~PCB_Project2.PrjPCB|ReportField=DataSourceFullPath~D:\wodewendang\1单片机大作业bsn\Single-chip Microcomputer Project by bsn\原理图\PCB_Project2.PrjPCB
+Cap Pol1|Polarized Capacitor (Radial)|C1|RB7.6-15|Cap Pol1|1
+Cap|Capacitor|C2, C3, C4, C5, C6, C7|RAD-0.3|Cap|6
+POWER|Typical INFRARED GaAs LED|D1|LED-0|LED0|1
+RUN|Typical INFRARED GaAs LED|D2|LED-0|LED0|1
+J1||J1||Component_1|1
+Bell|Electrical Bell|LS1|PIN2|Bell|1
+U3||MAX480|MAX485|Component_1|1
+PNP|PNP Bipolar Transistor|Q?|SOT-23B_N|PNP|1
+Res2|Resistor|R1, R2, R3, R?|AXIAL-0.4|Res2|4
+RESET|Switch|S1|SPST-2|SW-PB|1
+RUN|Switch|S2|SPST-2|SW-PB|1
+STC89C516||U1|STC89C516|STC89C516|1
+TC1508S||U2|TC1508S|TC1508S|1
+12M|Crystal Oscillator|Y1|R38|XTAL|1

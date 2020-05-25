@@ -1,0 +1,110 @@
+C51 COMPILER V9.01   MAIN                                                                  05/16/2020 13:03:29 PAGE 1   
+
+
+C51 COMPILER V9.01, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN main.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE main.c BROWSE DEBUG OBJECTEXTEND
+
+line level    source
+
+   1          #include "reg52.h"                       
+   2          
+   3          sbit led_power=P0^0;
+   4          sbit led_run=P0^1;
+   5          sbit engine=P1^0;
+   6          sbit run_button=P3^2;
+   7          sbit beef=P0^2; 
+   8          unsigned char second=0;
+   9          
+  10          void Timer0Init()
+  11          {
+  12   1              TMOD|=0X01;
+  13   1              TH0=0XFC;       
+  14   1              TL0=0X18;       
+  15   1              ET0=1;
+  16   1              EA=1;
+  17   1              TR0=1;                  
+  18   1      }
+  19          
+  20          void delay(int i)
+  21          {
+  22   1          while(i--);
+  23   1      }
+  24          
+  25          void beef_run()
+  26          {
+  27   1          int j;
+  28   1          for ( j = 0; j < 500; j++)
+  29   1          {
+  30   2              beef=~beef;
+  31   2              delay(100);
+  32   2          }
+  33   1      }
+  34          
+  35          void Int0Init()
+  36          {
+  37   1          IT0=1;
+  38   1          EX0=1;
+  39   1          EA=1; 
+  40   1      
+  41   1      }
+  42          
+  43          void run() interrupt 0
+  44          {
+  45   1              ET0=1;
+  46   1          TH0=0XFC;   
+  47   1              TL0=0X18;
+  48   1          beef_run();
+  49   1          Timer0Init();
+  50   1      }
+  51          
+  52          void led_timer() interrupt 1
+  53          {
+  54   1              static int i=0;
+  55   1              engine=1;
+C51 COMPILER V9.01   MAIN                                                                  05/16/2020 13:03:29 PAGE 2   
+
+  56   1              TH0=0XFC;       
+  57   1              TL0=0X18;
+  58   1              i++;
+  59   1              if(i==500)
+  60   1              {
+  61   2                  if(second==10)
+  62   2                  {
+  63   3                          led_run=0;
+  64   3                              engine=0;
+  65   3                              ET0=0;
+  66   3                              second=0;
+  67   3                  beef_run();
+  68   3                              Int0Init();
+  69   3                  }
+  70   2                      i=0;
+  71   2                      led_run=~led_run;
+  72   2                      second++;       
+  73   2              }       
+  74   1      }
+  75          
+  76          
+  77          
+  78          void main()
+  79          {       
+  80   1          led_power=0;
+  81   1              led_run=1;
+  82   1              engine=0;
+  83   1          Int0Init();  
+  84   1              while(1);               
+  85   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    201    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      3    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
